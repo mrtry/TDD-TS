@@ -1,8 +1,8 @@
 import FizzBuzz from './FizzBuzz'
 
-describe('FizzBuzzTest', () => {
-  const fizzBuzz = new FizzBuzz()
+const fizzBuzz = new FizzBuzz()
 
+describe('正常系', () => {
   it('3の倍数のとき、"Fizz"を返す', () => {
     expect(fizzBuzz.convert(3)).toBe("Fizz")
   })
@@ -15,10 +15,13 @@ describe('FizzBuzzTest', () => {
     expect(fizzBuzz.convert(15)).toBe("FizzBuzz")
   })
 
-  describe('その他のとき', () => {
-    it('0の倍数のとき、"1"を返す', () => {
-      expect(fizzBuzz.convert(1)).toBe("1")
-    })
+  it('その他の値のとき、"1"を返す', () => {
+    expect(fizzBuzz.convert(1)).toBe("1")
   })
+})
 
+describe('異常系', () => {
+  it('1 <= 値 <= 100以外の値が入ってきたら、エラーと表示を出す', () => {
+    expect(fizzBuzz.convert(0)).toBe("error")
+  })
 })

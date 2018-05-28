@@ -10,4 +10,8 @@ describe('FizzBuzzTest', () => {
   it('5の倍数のとき、"Buzz"を返す', () => {
     expect(fizzBuzz.convert(5)).toBe("Buzz")
   })
+
+  it('15の倍数のとき、"FizzBuzz"を返す', () => {
+    expect(fizzBuzz.convert(15)).toBe("FizzBuzz")
+  })
 })

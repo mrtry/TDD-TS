@@ -1,6 +1,8 @@
 import Utils from './Utils'
 
-test('echo', () => {
+describe('echo', () => {
   const utils = new Utils()
-  expect(utils.echo(1)).toBe(1);
+  it('test', () => {
+    expect(utils.echo(1)).toBe(1);
+  })
 })

@@ -14,4 +14,11 @@ describe('FizzBuzzTest', () => {
   it('15の倍数のとき、"FizzBuzz"を返す', () => {
     expect(fizzBuzz.convert(15)).toBe("FizzBuzz")
   })
+
+  describe('その他のとき', () => {
+    it('0の倍数のとき、"1"を返す', () => {
+      expect(fizzBuzz.convert(1)).toBe("1")
+    })
+  })
+
 })
